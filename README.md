@@ -1,4 +1,4 @@
-# Sentence Variational Autoencoder
+# Sentence Variational Autoencoder (Simplied Version for Demo at TechX)
 
 Materials borrowed from https://github.com/timbmg/: PyTorch re-implementation of [_Generating Sentences from a Continuous Space_](https://arxiv.org/abs/1511.06349) by Bowman et al. 2015.
 ![Model Architecture](https://github.com/hammad001/Language-Modelling-CSE291-AS2/blob/master/figs/model.png "Model Architecture")
