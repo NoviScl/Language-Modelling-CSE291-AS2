@@ -54,10 +54,19 @@ def main(args):
         bidirectional=args.bidirectional
         )
 
-    if torch.cuda.is_available():
-        model = model.cuda()
+    # if torch.cuda.is_available():
+    #     model = model.cuda()
 
-    print(model)
+    # print(model)
+
+    logger.info(model)
+
+    if torch.cuda.is_available():
+        device = "cuda"
+        logger.info("Number of GPU: {}".format(torch.cuda.device_count()))
+    else:
+        device = "cpu"
+    model = model.to(device)
 
     if args.tensorboard_logging:
         writer = SummaryWriter(os.path.join(args.logdir, experiment_name(args,ts)))
@@ -72,11 +81,11 @@ def main(args):
         if anneal_function == 'identity':
             return 1
 
-    ReconLoss = torch.nn.NLLLoss(size_average=False, ignore_index=datasets['train'].pad_idx)
+    ReconLoss = torch.nn.NLLLoss(reduction='mean', ignore_index=datasets['train'].pad_idx)
     def loss_fn(logp, target, length, mean, logv, anneal_function, step):
 
         # cut-off unnecessary padding from target, and flatten
-        target = target[:, :torch.max(length).data[0]].contiguous().view(-1)
+        target = target[:, :torch.max(length)].contiguous().view(-1) 
         logp = logp.view(-1, logp.size(2))
         
         # Negative Log Likelihood
@@ -104,7 +113,8 @@ def main(args):
                 pin_memory=torch.cuda.is_available()
             )
 
-            tracker = defaultdict(tensor)
+            # tracker = defaultdict(tensor)
+            loss_list = []
 
             # Enable/Disable Dropout
             if split == 'train':
@@ -128,10 +138,12 @@ def main(args):
                     batch['length'], mean, logv, args.anneal_function, step)
 
                 if split == 'train':
-                    loss = (recon_loss + KL_weight * KL_loss)/batch_size
+                    # loss = (recon_loss + KL_weight * KL_loss)/batch_size
+                    loss = recon_loss + (KL_weight * KL_loss) / batch_size 
                 else:
                     # report complete elbo when validation
-                    loss = (recon_loss + KL_loss)/batch_size
+                    # loss = (recon_loss + KL_loss)/batch_size
+                    loss = recon_loss + KL_loss / batch_size
 
                 # backward + optimization
                 if split == 'train':
@@ -142,7 +154,8 @@ def main(args):
 
 
                 # bookkeepeing
-                tracker['negELBO'] = torch.cat((tracker['negELBO'], loss.data))
+                # tracker['negELBO'] = torch.cat((tracker['negELBO'], loss.data))
+                loss_list.append(loss.item())
 
                 if args.tensorboard_logging:
                     writer.add_scalar("%s/Negative_ELBO"%split.upper(), loss.data[0], epoch*len(data_loader) + iteration)
@@ -152,32 +165,32 @@ def main(args):
 
                 if iteration % args.print_every == 0 or iteration+1 == len(data_loader):
                     logger.info("%s Batch %04d/%i, Loss %9.4f, Recon-Loss %9.4f, KL-Loss %9.4f, KL-Weight %6.3f"
-                        %(split.upper(), iteration, len(data_loader)-1, loss.data[0], recon_loss.data[0]/batch_size, KL_loss.data[0]/batch_size, KL_weight))
+                        %(split.upper(), iteration, len(data_loader)-1, loss.item(), recon_loss.item(), KL_loss.item()/batch_size, KL_weight))
 
-                if split == 'valid':
-                    if 'target_sents' not in tracker:
-                        tracker['target_sents'] = list()
-                    tracker['target_sents'] += idx2word(batch['target'].data, i2w=datasets['train'].get_i2w(), pad_idx=datasets['train'].pad_idx)
-                    tracker['z'] = torch.cat((tracker['z'], z.data), dim=0)
+                # if split == 'valid':
+                #     if 'target_sents' not in tracker:
+                #         tracker['target_sents'] = list()
+                #     tracker['target_sents'] += idx2word(batch['target'].data, i2w=datasets['train'].get_i2w(), pad_idx=datasets['train'].pad_idx)
+                #     tracker['z'] = torch.cat((tracker['z'], z.data), dim=0)
 
-            logger.info("%s Epoch %02d/%i, Mean Negative ELBO %9.4f"%(split.upper(), epoch, args.epochs, torch.mean(tracker['negELBO'])))
+            logger.info("%s Epoch %02d/%i, Mean Negative ELBO %9.4f, PPL: %.4f"%(split.upper(), epoch, args.epochs, np.mean(loss_list), np.exp(np.mean(loss_list))))
 
             if args.tensorboard_logging:
-                writer.add_scalar("%s-Epoch/NegELBO"%split.upper(), torch.mean(tracker['negELBO']), epoch)
+                writer.add_scalar("%s-Epoch/NegELBO"%split.upper(), np.mean(loss_list), epoch)
 
-            # save a dump of all sentences and the encoded latent space
-            if split == 'valid':
-                dump = {'target_sents':tracker['target_sents'], 'z':tracker['z'].tolist()}
-                if not os.path.exists(os.path.join('dumps', ts)):
-                    os.makedirs('dumps/'+ts)
-                with open(os.path.join('dumps/'+ts+'/valid_E%i.json'%epoch), 'w') as dump_file:
-                    json.dump(dump,dump_file)
+            ## save a dump of all sentences and the encoded latent space
+            # if split == 'valid':
+            #     dump = {'target_sents':tracker['target_sents'], 'z':tracker['z'].tolist()}
+            #     if not os.path.exists(os.path.join('dumps', ts)):
+            #         os.makedirs('dumps/'+ts)
+            #     with open(os.path.join('dumps/'+ts+'/valid_E%i.json'%epoch), 'w') as dump_file:
+            #         json.dump(dump,dump_file)
 
             # save checkpoint
-            if split == 'train':
-                checkpoint_path = os.path.join(save_model_path, "E%i.pytorch"%(epoch))
-                torch.save(model.state_dict(), checkpoint_path)
-                logger.info("Model saved at %s"%checkpoint_path)
+            # if split == 'train':
+            #     checkpoint_path = os.path.join(save_model_path, "E%i.pytorch"%(epoch))
+            #     torch.save(model.state_dict(), checkpoint_path)
+            #     logger.info("Model saved at %s"%checkpoint_path)
 
 
 if __name__ == '__main__':

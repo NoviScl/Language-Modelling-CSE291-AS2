@@ -12,10 +12,10 @@ class OrderedCounter(Counter, OrderedDict):
     def __reduce__(self):
         return self.__class__, (OrderedDict(self),)
 
-def to_var(x, volatile=False):
+def to_var(x):
     if torch.cuda.is_available():
         x = x.cuda()
-    return Variable(x, volatile=volatile)
+    return x
 
 
 def idx2word(idx, i2w, pad_idx):

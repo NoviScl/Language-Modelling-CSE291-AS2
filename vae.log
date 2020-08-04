@@ -1,0 +1,171 @@
+08/04/2020 05:26:32 - INFO - __main__ -   SentenceVAE(
+  (embedding): Embedding(9877, 300)
+  (embedding_dropout): Dropout(p=0.5, inplace=False)
+  (encoder_rnn): LSTM(300, 300, num_layers=2, batch_first=True)
+  (decoder_rnn): LSTM(300, 300, num_layers=2, batch_first=True)
+  (hidden2mean): Linear(in_features=600, out_features=16, bias=True)
+  (hidden2logv): Linear(in_features=600, out_features=16, bias=True)
+  (latent2hidden): Linear(in_features=16, out_features=600, bias=True)
+  (outputs2vocab): Linear(in_features=300, out_features=9877, bias=True)
+)
+08/04/2020 05:26:32 - INFO - __main__ -   Number of GPU: 1
+08/04/2020 05:26:40 - INFO - __main__ -   TRAIN Batch 0000/1314, Loss    9.2448, Recon-Loss    9.1932, KL-Loss    0.0517, KL-Weight  1.000
+08/04/2020 05:26:44 - INFO - __main__ -   TRAIN Batch 0100/1314, Loss    6.5186, Recon-Loss    6.5149, KL-Loss    0.0037, KL-Weight  1.000
+08/04/2020 05:26:47 - INFO - __main__ -   TRAIN Batch 0200/1314, Loss    6.3509, Recon-Loss    6.3498, KL-Loss    0.0011, KL-Weight  1.000
+08/04/2020 05:26:51 - INFO - __main__ -   TRAIN Batch 0300/1314, Loss    6.0846, Recon-Loss    6.0841, KL-Loss    0.0005, KL-Weight  1.000
+08/04/2020 05:26:55 - INFO - __main__ -   TRAIN Batch 0400/1314, Loss    5.9290, Recon-Loss    5.9286, KL-Loss    0.0003, KL-Weight  1.000
+08/04/2020 05:26:58 - INFO - __main__ -   TRAIN Batch 0500/1314, Loss    5.7859, Recon-Loss    5.7856, KL-Loss    0.0002, KL-Weight  1.000
+08/04/2020 05:27:02 - INFO - __main__ -   TRAIN Batch 0600/1314, Loss    5.8400, Recon-Loss    5.8398, KL-Loss    0.0002, KL-Weight  1.000
+08/04/2020 05:27:06 - INFO - __main__ -   TRAIN Batch 0700/1314, Loss    5.4584, Recon-Loss    5.4583, KL-Loss    0.0001, KL-Weight  1.000
+08/04/2020 05:27:09 - INFO - __main__ -   TRAIN Batch 0800/1314, Loss    5.7721, Recon-Loss    5.7720, KL-Loss    0.0001, KL-Weight  1.000
+08/04/2020 05:27:13 - INFO - __main__ -   TRAIN Batch 0900/1314, Loss    5.7150, Recon-Loss    5.7149, KL-Loss    0.0001, KL-Weight  1.000
+08/04/2020 05:27:17 - INFO - __main__ -   TRAIN Batch 1000/1314, Loss    5.7054, Recon-Loss    5.7054, KL-Loss    0.0001, KL-Weight  1.000
+08/04/2020 05:27:20 - INFO - __main__ -   TRAIN Batch 1100/1314, Loss    5.3964, Recon-Loss    5.3964, KL-Loss    0.0000, KL-Weight  1.000
+08/04/2020 05:27:24 - INFO - __main__ -   TRAIN Batch 1200/1314, Loss    5.4219, Recon-Loss    5.4218, KL-Loss    0.0001, KL-Weight  1.000
+08/04/2020 05:27:28 - INFO - __main__ -   TRAIN Batch 1300/1314, Loss    5.4281, Recon-Loss    5.4281, KL-Loss    0.0000, KL-Weight  1.000
+08/04/2020 05:27:28 - INFO - __main__ -   TRAIN Batch 1314/1314, Loss    5.6897, Recon-Loss    5.6896, KL-Loss    0.0000, KL-Weight  1.000
+08/04/2020 05:27:28 - INFO - __main__ -   TRAIN Epoch 00/8, Mean Negative ELBO    5.8639, PPL: 352.1012
+08/04/2020 05:27:31 - INFO - __main__ -   VALID Batch 0000/105, Loss    5.9562, Recon-Loss    5.9562, KL-Loss    0.0000, KL-Weight  1.000
+08/04/2020 05:27:31 - INFO - __main__ -   VALID Batch 0100/105, Loss    5.9148, Recon-Loss    5.9148, KL-Loss    0.0000, KL-Weight  1.000
+08/04/2020 05:27:32 - INFO - __main__ -   VALID Batch 0105/105, Loss    4.7050, Recon-Loss    4.7050, KL-Loss    0.0000, KL-Weight  1.000
+08/04/2020 05:27:32 - INFO - __main__ -   VALID Epoch 00/8, Mean Negative ELBO    5.3495, PPL: 210.5120
+08/04/2020 05:27:34 - INFO - __main__ -   TRAIN Batch 0000/1314, Loss    5.1921, Recon-Loss    5.1921, KL-Loss    0.0000, KL-Weight  1.000
+08/04/2020 05:27:38 - INFO - __main__ -   TRAIN Batch 0100/1314, Loss    5.2813, Recon-Loss    5.2813, KL-Loss    0.0000, KL-Weight  1.000
+08/04/2020 05:27:41 - INFO - __main__ -   TRAIN Batch 0200/1314, Loss    5.2501, Recon-Loss    5.2501, KL-Loss    0.0000, KL-Weight  1.000
+08/04/2020 05:27:45 - INFO - __main__ -   TRAIN Batch 0300/1314, Loss    5.3756, Recon-Loss    5.3756, KL-Loss    0.0000, KL-Weight  1.000
+08/04/2020 05:27:49 - INFO - __main__ -   TRAIN Batch 0400/1314, Loss    5.2332, Recon-Loss    5.2331, KL-Loss    0.0000, KL-Weight  1.000
+08/04/2020 05:27:52 - INFO - __main__ -   TRAIN Batch 0500/1314, Loss    5.3372, Recon-Loss    5.3372, KL-Loss    0.0000, KL-Weight  1.000
+08/04/2020 05:27:56 - INFO - __main__ -   TRAIN Batch 0600/1314, Loss    4.8672, Recon-Loss    4.8672, KL-Loss    0.0000, KL-Weight  1.000
+08/04/2020 05:28:00 - INFO - __main__ -   TRAIN Batch 0700/1314, Loss    4.8701, Recon-Loss    4.8701, KL-Loss    0.0000, KL-Weight  1.000
+08/04/2020 05:28:04 - INFO - __main__ -   TRAIN Batch 0800/1314, Loss    5.2173, Recon-Loss    5.2173, KL-Loss    0.0000, KL-Weight  1.000
+08/04/2020 05:28:07 - INFO - __main__ -   TRAIN Batch 0900/1314, Loss    5.1710, Recon-Loss    5.1710, KL-Loss    0.0000, KL-Weight  1.000
+08/04/2020 05:28:11 - INFO - __main__ -   TRAIN Batch 1000/1314, Loss    5.1880, Recon-Loss    5.1880, KL-Loss    0.0000, KL-Weight  1.000
+08/04/2020 05:28:15 - INFO - __main__ -   TRAIN Batch 1100/1314, Loss    5.2565, Recon-Loss    5.2564, KL-Loss    0.0000, KL-Weight  1.000
+08/04/2020 05:28:18 - INFO - __main__ -   TRAIN Batch 1200/1314, Loss    5.2530, Recon-Loss    5.2530, KL-Loss    0.0000, KL-Weight  1.000
+08/04/2020 05:28:22 - INFO - __main__ -   TRAIN Batch 1300/1314, Loss    5.2019, Recon-Loss    5.2018, KL-Loss    0.0000, KL-Weight  1.000
+08/04/2020 05:28:23 - INFO - __main__ -   TRAIN Batch 1314/1314, Loss    4.9489, Recon-Loss    4.9489, KL-Loss    0.0000, KL-Weight  1.000
+08/04/2020 05:28:23 - INFO - __main__ -   TRAIN Epoch 01/8, Mean Negative ELBO    5.2234, PPL: 185.5625
+08/04/2020 05:28:25 - INFO - __main__ -   VALID Batch 0000/105, Loss    5.7626, Recon-Loss    5.7626, KL-Loss    0.0000, KL-Weight  1.000
+08/04/2020 05:28:26 - INFO - __main__ -   VALID Batch 0100/105, Loss    5.6423, Recon-Loss    5.6423, KL-Loss    0.0000, KL-Weight  1.000
+08/04/2020 05:28:26 - INFO - __main__ -   VALID Batch 0105/105, Loss    4.4315, Recon-Loss    4.4315, KL-Loss    0.0000, KL-Weight  1.000
+08/04/2020 05:28:26 - INFO - __main__ -   VALID Epoch 01/8, Mean Negative ELBO    5.0826, PPL: 161.1857
+08/04/2020 05:28:29 - INFO - __main__ -   TRAIN Batch 0000/1314, Loss    4.9961, Recon-Loss    4.9961, KL-Loss    0.0000, KL-Weight  1.000
+08/04/2020 05:28:32 - INFO - __main__ -   TRAIN Batch 0100/1314, Loss    5.1655, Recon-Loss    5.1655, KL-Loss    0.0000, KL-Weight  1.000
+08/04/2020 05:28:36 - INFO - __main__ -   TRAIN Batch 0200/1314, Loss    4.8813, Recon-Loss    4.8813, KL-Loss    0.0000, KL-Weight  1.000
+08/04/2020 05:28:40 - INFO - __main__ -   TRAIN Batch 0300/1314, Loss    4.6728, Recon-Loss    4.6727, KL-Loss    0.0000, KL-Weight  1.000
+08/04/2020 05:28:43 - INFO - __main__ -   TRAIN Batch 0400/1314, Loss    4.7890, Recon-Loss    4.7889, KL-Loss    0.0000, KL-Weight  1.000
+08/04/2020 05:28:47 - INFO - __main__ -   TRAIN Batch 0500/1314, Loss    5.0835, Recon-Loss    5.0835, KL-Loss    0.0000, KL-Weight  1.000
+08/04/2020 05:28:51 - INFO - __main__ -   TRAIN Batch 0600/1314, Loss    4.9146, Recon-Loss    4.9146, KL-Loss    0.0000, KL-Weight  1.000
+08/04/2020 05:28:54 - INFO - __main__ -   TRAIN Batch 0700/1314, Loss    4.8725, Recon-Loss    4.8725, KL-Loss    0.0000, KL-Weight  1.000
+08/04/2020 05:28:58 - INFO - __main__ -   TRAIN Batch 0800/1314, Loss    4.8151, Recon-Loss    4.8151, KL-Loss    0.0000, KL-Weight  1.000
+08/04/2020 05:29:02 - INFO - __main__ -   TRAIN Batch 0900/1314, Loss    5.0927, Recon-Loss    5.0927, KL-Loss    0.0000, KL-Weight  1.000
+08/04/2020 05:29:06 - INFO - __main__ -   TRAIN Batch 1000/1314, Loss    5.1452, Recon-Loss    5.1452, KL-Loss    0.0000, KL-Weight  1.000
+08/04/2020 05:29:09 - INFO - __main__ -   TRAIN Batch 1100/1314, Loss    5.1555, Recon-Loss    5.1555, KL-Loss    0.0000, KL-Weight  1.000
+08/04/2020 05:29:13 - INFO - __main__ -   TRAIN Batch 1200/1314, Loss    4.6302, Recon-Loss    4.6302, KL-Loss    0.0000, KL-Weight  1.000
+08/04/2020 05:29:17 - INFO - __main__ -   TRAIN Batch 1300/1314, Loss    4.8660, Recon-Loss    4.8660, KL-Loss    0.0000, KL-Weight  1.000
+08/04/2020 05:29:17 - INFO - __main__ -   TRAIN Batch 1314/1314, Loss    5.2969, Recon-Loss    5.2969, KL-Loss    0.0000, KL-Weight  1.000
+08/04/2020 05:29:18 - INFO - __main__ -   TRAIN Epoch 02/8, Mean Negative ELBO    4.9765, PPL: 144.9730
+08/04/2020 05:29:20 - INFO - __main__ -   VALID Batch 0000/105, Loss    5.6714, Recon-Loss    5.6714, KL-Loss    0.0000, KL-Weight  1.000
+08/04/2020 05:29:21 - INFO - __main__ -   VALID Batch 0100/105, Loss    5.4925, Recon-Loss    5.4925, KL-Loss    0.0000, KL-Weight  1.000
+08/04/2020 05:29:21 - INFO - __main__ -   VALID Batch 0105/105, Loss    4.3163, Recon-Loss    4.3163, KL-Loss    0.0000, KL-Weight  1.000
+08/04/2020 05:29:21 - INFO - __main__ -   VALID Epoch 02/8, Mean Negative ELBO    4.9399, PPL: 139.7529
+08/04/2020 05:29:23 - INFO - __main__ -   TRAIN Batch 0000/1314, Loss    4.6256, Recon-Loss    4.6256, KL-Loss    0.0000, KL-Weight  1.000
+08/04/2020 05:29:27 - INFO - __main__ -   TRAIN Batch 0100/1314, Loss    4.7776, Recon-Loss    4.7776, KL-Loss    0.0000, KL-Weight  1.000
+08/04/2020 05:29:30 - INFO - __main__ -   TRAIN Batch 0200/1314, Loss    5.0903, Recon-Loss    5.0903, KL-Loss    0.0000, KL-Weight  1.000
+08/04/2020 05:29:34 - INFO - __main__ -   TRAIN Batch 0300/1314, Loss    4.9707, Recon-Loss    4.9707, KL-Loss    0.0000, KL-Weight  1.000
+08/04/2020 05:29:38 - INFO - __main__ -   TRAIN Batch 0400/1314, Loss    4.8516, Recon-Loss    4.8515, KL-Loss    0.0000, KL-Weight  1.000
+08/04/2020 05:29:41 - INFO - __main__ -   TRAIN Batch 0500/1314, Loss    4.9346, Recon-Loss    4.9346, KL-Loss    0.0000, KL-Weight  1.000
+08/04/2020 05:29:45 - INFO - __main__ -   TRAIN Batch 0600/1314, Loss    4.9131, Recon-Loss    4.9131, KL-Loss    0.0000, KL-Weight  1.000
+08/04/2020 05:29:49 - INFO - __main__ -   TRAIN Batch 0700/1314, Loss    4.8285, Recon-Loss    4.8285, KL-Loss    0.0000, KL-Weight  1.000
+08/04/2020 05:29:53 - INFO - __main__ -   TRAIN Batch 0800/1314, Loss    4.8087, Recon-Loss    4.8087, KL-Loss    0.0000, KL-Weight  1.000
+08/04/2020 05:29:57 - INFO - __main__ -   TRAIN Batch 0900/1314, Loss    4.6015, Recon-Loss    4.6014, KL-Loss    0.0000, KL-Weight  1.000
+08/04/2020 05:30:01 - INFO - __main__ -   TRAIN Batch 1000/1314, Loss    4.7820, Recon-Loss    4.7820, KL-Loss    0.0000, KL-Weight  1.000
+08/04/2020 05:30:04 - INFO - __main__ -   TRAIN Batch 1100/1314, Loss    4.7393, Recon-Loss    4.7393, KL-Loss    0.0000, KL-Weight  1.000
+08/04/2020 05:30:07 - INFO - __main__ -   TRAIN Batch 1200/1314, Loss    4.8758, Recon-Loss    4.8758, KL-Loss    0.0000, KL-Weight  1.000
+08/04/2020 05:30:10 - INFO - __main__ -   TRAIN Batch 1300/1314, Loss    5.0384, Recon-Loss    5.0384, KL-Loss    0.0000, KL-Weight  1.000
+08/04/2020 05:30:10 - INFO - __main__ -   TRAIN Batch 1314/1314, Loss    4.5644, Recon-Loss    4.5644, KL-Loss    0.0000, KL-Weight  1.000
+08/04/2020 05:30:11 - INFO - __main__ -   TRAIN Epoch 03/8, Mean Negative ELBO    4.8104, PPL: 122.7802
+08/04/2020 05:30:13 - INFO - __main__ -   VALID Batch 0000/105, Loss    5.6727, Recon-Loss    5.6727, KL-Loss    0.0000, KL-Weight  1.000
+08/04/2020 05:30:14 - INFO - __main__ -   VALID Batch 0100/105, Loss    5.4114, Recon-Loss    5.4114, KL-Loss    0.0000, KL-Weight  1.000
+08/04/2020 05:30:14 - INFO - __main__ -   VALID Batch 0105/105, Loss    4.3195, Recon-Loss    4.3195, KL-Loss    0.0000, KL-Weight  1.000
+08/04/2020 05:30:14 - INFO - __main__ -   VALID Epoch 03/8, Mean Negative ELBO    4.8604, PPL: 129.0753
+08/04/2020 05:30:16 - INFO - __main__ -   TRAIN Batch 0000/1314, Loss    4.7471, Recon-Loss    4.7470, KL-Loss    0.0000, KL-Weight  1.000
+08/04/2020 05:30:20 - INFO - __main__ -   TRAIN Batch 0100/1314, Loss    4.6466, Recon-Loss    4.6466, KL-Loss    0.0000, KL-Weight  1.000
+08/04/2020 05:30:24 - INFO - __main__ -   TRAIN Batch 0200/1314, Loss    4.2308, Recon-Loss    4.2308, KL-Loss    0.0000, KL-Weight  1.000
+08/04/2020 05:30:27 - INFO - __main__ -   TRAIN Batch 0300/1314, Loss    4.5648, Recon-Loss    4.5648, KL-Loss    0.0000, KL-Weight  1.000
+08/04/2020 05:30:31 - INFO - __main__ -   TRAIN Batch 0400/1314, Loss    4.3791, Recon-Loss    4.3791, KL-Loss    0.0000, KL-Weight  1.000
+08/04/2020 05:30:35 - INFO - __main__ -   TRAIN Batch 0500/1314, Loss    4.5143, Recon-Loss    4.5143, KL-Loss    0.0000, KL-Weight  1.000
+08/04/2020 05:30:38 - INFO - __main__ -   TRAIN Batch 0600/1314, Loss    5.0381, Recon-Loss    5.0381, KL-Loss    0.0000, KL-Weight  1.000
+08/04/2020 05:30:42 - INFO - __main__ -   TRAIN Batch 0700/1314, Loss    4.8507, Recon-Loss    4.8507, KL-Loss    0.0000, KL-Weight  1.000
+08/04/2020 05:30:46 - INFO - __main__ -   TRAIN Batch 0800/1314, Loss    4.7491, Recon-Loss    4.7491, KL-Loss    0.0000, KL-Weight  1.000
+08/04/2020 05:30:49 - INFO - __main__ -   TRAIN Batch 0900/1314, Loss    4.7401, Recon-Loss    4.7401, KL-Loss    0.0000, KL-Weight  1.000
+08/04/2020 05:30:53 - INFO - __main__ -   TRAIN Batch 1000/1314, Loss    4.8607, Recon-Loss    4.8607, KL-Loss    0.0000, KL-Weight  1.000
+08/04/2020 05:30:57 - INFO - __main__ -   TRAIN Batch 1100/1314, Loss    4.7888, Recon-Loss    4.7888, KL-Loss    0.0000, KL-Weight  1.000
+08/04/2020 05:31:00 - INFO - __main__ -   TRAIN Batch 1200/1314, Loss    4.5703, Recon-Loss    4.5703, KL-Loss    0.0000, KL-Weight  1.000
+08/04/2020 05:31:04 - INFO - __main__ -   TRAIN Batch 1300/1314, Loss    4.9028, Recon-Loss    4.9028, KL-Loss    0.0000, KL-Weight  1.000
+08/04/2020 05:31:04 - INFO - __main__ -   TRAIN Batch 1314/1314, Loss    4.4935, Recon-Loss    4.4935, KL-Loss    0.0000, KL-Weight  1.000
+08/04/2020 05:31:04 - INFO - __main__ -   TRAIN Epoch 04/8, Mean Negative ELBO    4.6819, PPL: 107.9728
+08/04/2020 05:31:07 - INFO - __main__ -   VALID Batch 0000/105, Loss    5.6387, Recon-Loss    5.6387, KL-Loss    0.0000, KL-Weight  1.000
+08/04/2020 05:31:08 - INFO - __main__ -   VALID Batch 0100/105, Loss    5.3743, Recon-Loss    5.3742, KL-Loss    0.0000, KL-Weight  1.000
+08/04/2020 05:31:08 - INFO - __main__ -   VALID Batch 0105/105, Loss    4.3559, Recon-Loss    4.3559, KL-Loss    0.0000, KL-Weight  1.000
+08/04/2020 05:31:08 - INFO - __main__ -   VALID Epoch 04/8, Mean Negative ELBO    4.8072, PPL: 122.3931
+08/04/2020 05:31:10 - INFO - __main__ -   TRAIN Batch 0000/1314, Loss    4.4912, Recon-Loss    4.4912, KL-Loss    0.0000, KL-Weight  1.000
+08/04/2020 05:31:14 - INFO - __main__ -   TRAIN Batch 0100/1314, Loss    4.2817, Recon-Loss    4.2817, KL-Loss    0.0000, KL-Weight  1.000
+08/04/2020 05:31:17 - INFO - __main__ -   TRAIN Batch 0200/1314, Loss    4.8767, Recon-Loss    4.8767, KL-Loss    0.0000, KL-Weight  1.000
+08/04/2020 05:31:21 - INFO - __main__ -   TRAIN Batch 0300/1314, Loss    4.2726, Recon-Loss    4.2726, KL-Loss    0.0000, KL-Weight  1.000
+08/04/2020 05:31:25 - INFO - __main__ -   TRAIN Batch 0400/1314, Loss    4.6666, Recon-Loss    4.6666, KL-Loss    0.0000, KL-Weight  1.000
+08/04/2020 05:31:29 - INFO - __main__ -   TRAIN Batch 0500/1314, Loss    4.5046, Recon-Loss    4.5046, KL-Loss    0.0000, KL-Weight  1.000
+08/04/2020 05:31:32 - INFO - __main__ -   TRAIN Batch 0600/1314, Loss    4.8175, Recon-Loss    4.8175, KL-Loss    0.0000, KL-Weight  1.000
+08/04/2020 05:31:36 - INFO - __main__ -   TRAIN Batch 0700/1314, Loss    4.5584, Recon-Loss    4.5584, KL-Loss    0.0000, KL-Weight  1.000
+08/04/2020 05:31:40 - INFO - __main__ -   TRAIN Batch 0800/1314, Loss    4.4056, Recon-Loss    4.4056, KL-Loss    0.0000, KL-Weight  1.000
+08/04/2020 05:31:43 - INFO - __main__ -   TRAIN Batch 0900/1314, Loss    4.3816, Recon-Loss    4.3816, KL-Loss    0.0000, KL-Weight  1.000
+08/04/2020 05:31:47 - INFO - __main__ -   TRAIN Batch 1000/1314, Loss    4.7903, Recon-Loss    4.7903, KL-Loss    0.0000, KL-Weight  1.000
+08/04/2020 05:31:51 - INFO - __main__ -   TRAIN Batch 1100/1314, Loss    4.7879, Recon-Loss    4.7879, KL-Loss    0.0000, KL-Weight  1.000
+08/04/2020 05:31:55 - INFO - __main__ -   TRAIN Batch 1200/1314, Loss    4.7100, Recon-Loss    4.7100, KL-Loss    0.0000, KL-Weight  1.000
+08/04/2020 05:31:58 - INFO - __main__ -   TRAIN Batch 1300/1314, Loss    4.7480, Recon-Loss    4.7480, KL-Loss    0.0000, KL-Weight  1.000
+08/04/2020 05:31:59 - INFO - __main__ -   TRAIN Batch 1314/1314, Loss    4.4956, Recon-Loss    4.4956, KL-Loss    0.0000, KL-Weight  1.000
+08/04/2020 05:31:59 - INFO - __main__ -   TRAIN Epoch 05/8, Mean Negative ELBO    4.5742, PPL: 96.9482
+08/04/2020 05:32:01 - INFO - __main__ -   VALID Batch 0000/105, Loss    5.6104, Recon-Loss    5.6104, KL-Loss    0.0000, KL-Weight  1.000
+08/04/2020 05:32:02 - INFO - __main__ -   VALID Batch 0100/105, Loss    5.3133, Recon-Loss    5.3133, KL-Loss    0.0000, KL-Weight  1.000
+08/04/2020 05:32:02 - INFO - __main__ -   VALID Batch 0105/105, Loss    4.2939, Recon-Loss    4.2939, KL-Loss    0.0000, KL-Weight  1.000
+08/04/2020 05:32:02 - INFO - __main__ -   VALID Epoch 05/8, Mean Negative ELBO    4.7734, PPL: 118.3195
+08/04/2020 05:32:05 - INFO - __main__ -   TRAIN Batch 0000/1314, Loss    4.4845, Recon-Loss    4.4845, KL-Loss    0.0000, KL-Weight  1.000
+08/04/2020 05:32:08 - INFO - __main__ -   TRAIN Batch 0100/1314, Loss    4.5456, Recon-Loss    4.5456, KL-Loss    0.0000, KL-Weight  1.000
+08/04/2020 05:32:12 - INFO - __main__ -   TRAIN Batch 0200/1314, Loss    4.1114, Recon-Loss    4.1114, KL-Loss    0.0000, KL-Weight  1.000
+08/04/2020 05:32:16 - INFO - __main__ -   TRAIN Batch 0300/1314, Loss    4.5470, Recon-Loss    4.5470, KL-Loss    0.0000, KL-Weight  1.000
+08/04/2020 05:32:20 - INFO - __main__ -   TRAIN Batch 0400/1314, Loss    4.5864, Recon-Loss    4.5864, KL-Loss    0.0000, KL-Weight  1.000
+08/04/2020 05:32:24 - INFO - __main__ -   TRAIN Batch 0500/1314, Loss    4.4471, Recon-Loss    4.4471, KL-Loss    0.0000, KL-Weight  1.000
+08/04/2020 05:32:27 - INFO - __main__ -   TRAIN Batch 0600/1314, Loss    4.3036, Recon-Loss    4.3036, KL-Loss    0.0000, KL-Weight  1.000
+08/04/2020 05:32:31 - INFO - __main__ -   TRAIN Batch 0700/1314, Loss    4.3126, Recon-Loss    4.3126, KL-Loss    0.0000, KL-Weight  1.000
+08/04/2020 05:32:35 - INFO - __main__ -   TRAIN Batch 0800/1314, Loss    4.6731, Recon-Loss    4.6731, KL-Loss    0.0000, KL-Weight  1.000
+08/04/2020 05:32:38 - INFO - __main__ -   TRAIN Batch 0900/1314, Loss    4.4183, Recon-Loss    4.4183, KL-Loss    0.0000, KL-Weight  1.000
+08/04/2020 05:32:42 - INFO - __main__ -   TRAIN Batch 1000/1314, Loss    4.3782, Recon-Loss    4.3782, KL-Loss    0.0000, KL-Weight  1.000
+08/04/2020 05:32:46 - INFO - __main__ -   TRAIN Batch 1100/1314, Loss    4.4039, Recon-Loss    4.4038, KL-Loss    0.0000, KL-Weight  1.000
+08/04/2020 05:32:49 - INFO - __main__ -   TRAIN Batch 1200/1314, Loss    4.4652, Recon-Loss    4.4651, KL-Loss    0.0000, KL-Weight  1.000
+08/04/2020 05:32:53 - INFO - __main__ -   TRAIN Batch 1300/1314, Loss    4.5363, Recon-Loss    4.5363, KL-Loss    0.0000, KL-Weight  1.000
+08/04/2020 05:32:54 - INFO - __main__ -   TRAIN Batch 1314/1314, Loss    4.4388, Recon-Loss    4.4387, KL-Loss    0.0000, KL-Weight  1.000
+08/04/2020 05:32:54 - INFO - __main__ -   TRAIN Epoch 06/8, Mean Negative ELBO    4.4847, PPL: 88.6527
+08/04/2020 05:32:56 - INFO - __main__ -   VALID Batch 0000/105, Loss    5.6616, Recon-Loss    5.6616, KL-Loss    0.0000, KL-Weight  1.000
+08/04/2020 05:32:57 - INFO - __main__ -   VALID Batch 0100/105, Loss    5.3320, Recon-Loss    5.3320, KL-Loss    0.0000, KL-Weight  1.000
+08/04/2020 05:32:57 - INFO - __main__ -   VALID Batch 0105/105, Loss    4.2657, Recon-Loss    4.2657, KL-Loss    0.0000, KL-Weight  1.000
+08/04/2020 05:32:57 - INFO - __main__ -   VALID Epoch 06/8, Mean Negative ELBO    4.7509, PPL: 115.6885
+08/04/2020 05:32:59 - INFO - __main__ -   TRAIN Batch 0000/1314, Loss    4.4419, Recon-Loss    4.4419, KL-Loss    0.0000, KL-Weight  1.000
+08/04/2020 05:33:03 - INFO - __main__ -   TRAIN Batch 0100/1314, Loss    4.5576, Recon-Loss    4.5575, KL-Loss    0.0000, KL-Weight  1.000
+08/04/2020 05:33:07 - INFO - __main__ -   TRAIN Batch 0200/1314, Loss    4.4749, Recon-Loss    4.4749, KL-Loss    0.0000, KL-Weight  1.000
+08/04/2020 05:33:11 - INFO - __main__ -   TRAIN Batch 0300/1314, Loss    4.4313, Recon-Loss    4.4313, KL-Loss    0.0000, KL-Weight  1.000
+08/04/2020 05:33:14 - INFO - __main__ -   TRAIN Batch 0400/1314, Loss    4.4863, Recon-Loss    4.4863, KL-Loss    0.0000, KL-Weight  1.000
+08/04/2020 05:33:18 - INFO - __main__ -   TRAIN Batch 0500/1314, Loss    4.3412, Recon-Loss    4.3412, KL-Loss    0.0000, KL-Weight  1.000
+08/04/2020 05:33:22 - INFO - __main__ -   TRAIN Batch 0600/1314, Loss    4.4644, Recon-Loss    4.4644, KL-Loss    0.0000, KL-Weight  1.000
+08/04/2020 05:33:25 - INFO - __main__ -   TRAIN Batch 0700/1314, Loss    4.5454, Recon-Loss    4.5454, KL-Loss    0.0000, KL-Weight  1.000
+08/04/2020 05:33:29 - INFO - __main__ -   TRAIN Batch 0800/1314, Loss    4.2781, Recon-Loss    4.2781, KL-Loss    0.0000, KL-Weight  1.000
+08/04/2020 05:33:33 - INFO - __main__ -   TRAIN Batch 0900/1314, Loss    4.4067, Recon-Loss    4.4067, KL-Loss    0.0000, KL-Weight  1.000
+08/04/2020 05:33:36 - INFO - __main__ -   TRAIN Batch 1000/1314, Loss    4.6782, Recon-Loss    4.6782, KL-Loss    0.0000, KL-Weight  1.000
+08/04/2020 05:33:40 - INFO - __main__ -   TRAIN Batch 1100/1314, Loss    4.5174, Recon-Loss    4.5174, KL-Loss    0.0000, KL-Weight  1.000
+08/04/2020 05:33:44 - INFO - __main__ -   TRAIN Batch 1200/1314, Loss    4.1075, Recon-Loss    4.1075, KL-Loss    0.0000, KL-Weight  1.000
+08/04/2020 05:33:48 - INFO - __main__ -   TRAIN Batch 1300/1314, Loss    4.3481, Recon-Loss    4.3481, KL-Loss    0.0000, KL-Weight  1.000
+08/04/2020 05:33:48 - INFO - __main__ -   TRAIN Batch 1314/1314, Loss    4.1104, Recon-Loss    4.1104, KL-Loss    0.0000, KL-Weight  1.000
+08/04/2020 05:33:49 - INFO - __main__ -   TRAIN Epoch 07/8, Mean Negative ELBO    4.4047, PPL: 81.8343
+08/04/2020 05:33:51 - INFO - __main__ -   VALID Batch 0000/105, Loss    5.6910, Recon-Loss    5.6909, KL-Loss    0.0000, KL-Weight  1.000
+08/04/2020 05:33:52 - INFO - __main__ -   VALID Batch 0100/105, Loss    5.3334, Recon-Loss    5.3334, KL-Loss    0.0000, KL-Weight  1.000
+08/04/2020 05:33:52 - INFO - __main__ -   VALID Batch 0105/105, Loss    4.3347, Recon-Loss    4.3347, KL-Loss    0.0000, KL-Weight  1.000
+08/04/2020 05:33:52 - INFO - __main__ -   VALID Epoch 07/8, Mean Negative ELBO    4.7508, PPL: 115.6792

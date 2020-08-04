@@ -58,7 +58,7 @@ class SentenceVAE(nn.Module):
 
         packed_input = rnn_utils.pack_padded_sequence(input_embedding, sorted_lengths.data.tolist(), batch_first=True)
 
-        _, hidden = self.encoder_rnn(packed_input)
+        _, (hidden, c) = self.encoder_rnn(packed_input) # hidden: (bsz, hid)
 
         if self.bidirectional or self.num_layers > 1:
             # flatten hidden state
@@ -81,7 +81,7 @@ class SentenceVAE(nn.Module):
             # unflatten hidden state
             hidden = hidden.view(self.hidden_factor, batch_size, self.hidden_size)
         else:
-            hidden = hidden.unsqueeze(0)
+            hidden = hidden.unsqueeze(0) #(1, bsz, hid)
 
         # decoder input
         if self.word_dropout_rate > 0:
@@ -97,7 +97,9 @@ class SentenceVAE(nn.Module):
         packed_input = rnn_utils.pack_padded_sequence(input_embedding, sorted_lengths.data.tolist(), batch_first=True)
 
         # decoder forward pass
-        outputs, _ = self.decoder_rnn(packed_input, hidden)
+        # use constructed hidden as initial, c default to zeros
+        c = torch.zeros_like(hidden)
+        outputs, _ = self.decoder_rnn(packed_input, (hidden, c))
 
         # process outputs
         padded_outputs = rnn_utils.pad_packed_sequence(outputs, batch_first=True)[0]

@@ -1,0 +1,159 @@
+08/02/2020 04:48:34 - INFO - __main__ -   SentenceRNN(
+  (embedding): Embedding(9877, 300)
+  (embedding_dropout): Dropout(p=0.5, inplace=False)
+  (rnn): LSTM(300, 300, num_layers=3, batch_first=True)
+  (outputs2vocab): Linear(in_features=300, out_features=9877, bias=True)
+)
+08/02/2020 04:48:34 - INFO - __main__ -   Number of GPU: 1
+08/02/2020 04:48:43 - INFO - __main__ -   TRAIN Batch 0099/1314, Loss    6.7809
+08/02/2020 04:48:46 - INFO - __main__ -   TRAIN Batch 0199/1314, Loss    6.5547
+08/02/2020 04:48:49 - INFO - __main__ -   TRAIN Batch 0299/1314, Loss    6.5330
+08/02/2020 04:48:51 - INFO - __main__ -   TRAIN Batch 0399/1314, Loss    6.4364
+08/02/2020 04:48:54 - INFO - __main__ -   TRAIN Batch 0499/1314, Loss    6.1112
+08/02/2020 04:48:57 - INFO - __main__ -   TRAIN Batch 0599/1314, Loss    6.1437
+08/02/2020 04:48:59 - INFO - __main__ -   TRAIN Batch 0699/1314, Loss    5.6985
+08/02/2020 04:49:02 - INFO - __main__ -   TRAIN Batch 0799/1314, Loss    6.1070
+08/02/2020 04:49:05 - INFO - __main__ -   TRAIN Batch 0899/1314, Loss    5.8957
+08/02/2020 04:49:07 - INFO - __main__ -   TRAIN Batch 0999/1314, Loss    5.5833
+08/02/2020 04:49:10 - INFO - __main__ -   TRAIN Batch 1099/1314, Loss    5.7662
+08/02/2020 04:49:12 - INFO - __main__ -   TRAIN Batch 1199/1314, Loss    5.3831
+08/02/2020 04:49:14 - INFO - __main__ -   TRAIN Batch 1299/1314, Loss    5.6125
+08/02/2020 04:49:15 - INFO - __main__ -   TRAIN Batch 1314/1314, Loss    5.6183
+08/02/2020 04:49:15 - INFO - __main__ -   TRAIN Epoch 00/8, Mean Loss: 6.1297, PPL: 459.2830
+08/02/2020 04:49:15 - INFO - __main__ -   Epoch running time: 34.29350304603577 seconds.
+08/02/2020 04:49:15 - INFO - __main__ -   VALID Batch 0099/105, Loss    5.9034
+08/02/2020 04:49:16 - INFO - __main__ -   VALID Batch 0105/105, Loss    4.8595
+08/02/2020 04:49:16 - INFO - __main__ -   VALID Epoch 00/8, Mean Loss: 5.5152, PPL: 248.4333
+08/02/2020 04:49:18 - INFO - __main__ -   TRAIN Batch 0099/1314, Loss    5.4013
+08/02/2020 04:49:21 - INFO - __main__ -   TRAIN Batch 0199/1314, Loss    5.3648
+08/02/2020 04:49:23 - INFO - __main__ -   TRAIN Batch 0299/1314, Loss    5.4069
+08/02/2020 04:49:26 - INFO - __main__ -   TRAIN Batch 0399/1314, Loss    5.2464
+08/02/2020 04:49:29 - INFO - __main__ -   TRAIN Batch 0499/1314, Loss    5.3239
+08/02/2020 04:49:31 - INFO - __main__ -   TRAIN Batch 0599/1314, Loss    5.3276
+08/02/2020 04:49:34 - INFO - __main__ -   TRAIN Batch 0699/1314, Loss    5.4097
+08/02/2020 04:49:37 - INFO - __main__ -   TRAIN Batch 0799/1314, Loss    5.2527
+08/02/2020 04:49:39 - INFO - __main__ -   TRAIN Batch 0899/1314, Loss    5.2882
+08/02/2020 04:49:42 - INFO - __main__ -   TRAIN Batch 0999/1314, Loss    5.0774
+08/02/2020 04:49:44 - INFO - __main__ -   TRAIN Batch 1099/1314, Loss    5.2100
+08/02/2020 04:49:47 - INFO - __main__ -   TRAIN Batch 1199/1314, Loss    4.9452
+08/02/2020 04:49:50 - INFO - __main__ -   TRAIN Batch 1299/1314, Loss    5.2205
+08/02/2020 04:49:50 - INFO - __main__ -   TRAIN Batch 1314/1314, Loss    5.1909
+08/02/2020 04:49:50 - INFO - __main__ -   TRAIN Epoch 01/8, Mean Loss: 5.2730, PPL: 195.0098
+08/02/2020 04:49:50 - INFO - __main__ -   Epoch running time: 34.609599590301514 seconds.
+08/02/2020 04:49:51 - INFO - __main__ -   VALID Batch 0099/105, Loss    5.5233
+08/02/2020 04:49:51 - INFO - __main__ -   VALID Batch 0105/105, Loss    4.4033
+08/02/2020 04:49:51 - INFO - __main__ -   VALID Epoch 01/8, Mean Loss: 5.1332, PPL: 169.5536
+08/02/2020 04:49:54 - INFO - __main__ -   TRAIN Batch 0099/1314, Loss    5.0151
+08/02/2020 04:49:56 - INFO - __main__ -   TRAIN Batch 0199/1314, Loss    5.1199
+08/02/2020 04:49:59 - INFO - __main__ -   TRAIN Batch 0299/1314, Loss    4.8153
+08/02/2020 04:50:02 - INFO - __main__ -   TRAIN Batch 0399/1314, Loss    5.0597
+08/02/2020 04:50:04 - INFO - __main__ -   TRAIN Batch 0499/1314, Loss    4.8754
+08/02/2020 04:50:07 - INFO - __main__ -   TRAIN Batch 0599/1314, Loss    5.1721
+08/02/2020 04:50:10 - INFO - __main__ -   TRAIN Batch 0699/1314, Loss    5.1107
+08/02/2020 04:50:12 - INFO - __main__ -   TRAIN Batch 0799/1314, Loss    5.1551
+08/02/2020 04:50:15 - INFO - __main__ -   TRAIN Batch 0899/1314, Loss    4.8417
+08/02/2020 04:50:17 - INFO - __main__ -   TRAIN Batch 0999/1314, Loss    4.8701
+08/02/2020 04:50:20 - INFO - __main__ -   TRAIN Batch 1099/1314, Loss    4.7424
+08/02/2020 04:50:23 - INFO - __main__ -   TRAIN Batch 1199/1314, Loss    4.7240
+08/02/2020 04:50:26 - INFO - __main__ -   TRAIN Batch 1299/1314, Loss    5.0789
+08/02/2020 04:50:26 - INFO - __main__ -   TRAIN Batch 1314/1314, Loss    4.5710
+08/02/2020 04:50:26 - INFO - __main__ -   TRAIN Epoch 02/8, Mean Loss: 4.9391, PPL: 139.6505
+08/02/2020 04:50:26 - INFO - __main__ -   Epoch running time: 35.03183150291443 seconds.
+08/02/2020 04:50:27 - INFO - __main__ -   VALID Batch 0099/105, Loss    5.3786
+08/02/2020 04:50:27 - INFO - __main__ -   VALID Batch 0105/105, Loss    4.2755
+08/02/2020 04:50:27 - INFO - __main__ -   VALID Epoch 02/8, Mean Loss: 4.9569, PPL: 142.1563
+08/02/2020 04:50:29 - INFO - __main__ -   TRAIN Batch 0099/1314, Loss    4.2252
+08/02/2020 04:50:32 - INFO - __main__ -   TRAIN Batch 0199/1314, Loss    4.4624
+08/02/2020 04:50:35 - INFO - __main__ -   TRAIN Batch 0299/1314, Loss    4.5893
+08/02/2020 04:50:37 - INFO - __main__ -   TRAIN Batch 0399/1314, Loss    4.9338
+08/02/2020 04:50:40 - INFO - __main__ -   TRAIN Batch 0499/1314, Loss    4.7760
+08/02/2020 04:50:43 - INFO - __main__ -   TRAIN Batch 0599/1314, Loss    4.7991
+08/02/2020 04:50:45 - INFO - __main__ -   TRAIN Batch 0699/1314, Loss    4.6611
+08/02/2020 04:50:48 - INFO - __main__ -   TRAIN Batch 0799/1314, Loss    4.7195
+08/02/2020 04:50:50 - INFO - __main__ -   TRAIN Batch 0899/1314, Loss    4.9069
+08/02/2020 04:50:53 - INFO - __main__ -   TRAIN Batch 0999/1314, Loss    4.9614
+08/02/2020 04:50:55 - INFO - __main__ -   TRAIN Batch 1099/1314, Loss    4.7272
+08/02/2020 04:50:58 - INFO - __main__ -   TRAIN Batch 1199/1314, Loss    4.8779
+08/02/2020 04:51:00 - INFO - __main__ -   TRAIN Batch 1299/1314, Loss    4.4275
+08/02/2020 04:51:00 - INFO - __main__ -   TRAIN Batch 1314/1314, Loss    4.8674
+08/02/2020 04:51:00 - INFO - __main__ -   TRAIN Epoch 03/8, Mean Loss: 4.7183, PPL: 111.9828
+08/02/2020 04:51:00 - INFO - __main__ -   Epoch running time: 33.59754395484924 seconds.
+08/02/2020 04:51:01 - INFO - __main__ -   VALID Batch 0099/105, Loss    5.2806
+08/02/2020 04:51:01 - INFO - __main__ -   VALID Batch 0105/105, Loss    4.2199
+08/02/2020 04:51:01 - INFO - __main__ -   VALID Epoch 03/8, Mean Loss: 4.8601, PPL: 129.0401
+08/02/2020 04:51:03 - INFO - __main__ -   TRAIN Batch 0099/1314, Loss    4.5485
+08/02/2020 04:51:06 - INFO - __main__ -   TRAIN Batch 0199/1314, Loss    4.6787
+08/02/2020 04:51:08 - INFO - __main__ -   TRAIN Batch 0299/1314, Loss    4.4604
+08/02/2020 04:51:11 - INFO - __main__ -   TRAIN Batch 0399/1314, Loss    4.8030
+08/02/2020 04:51:13 - INFO - __main__ -   TRAIN Batch 0499/1314, Loss    4.4447
+08/02/2020 04:51:16 - INFO - __main__ -   TRAIN Batch 0599/1314, Loss    4.2715
+08/02/2020 04:51:19 - INFO - __main__ -   TRAIN Batch 0699/1314, Loss    4.7563
+08/02/2020 04:51:22 - INFO - __main__ -   TRAIN Batch 0799/1314, Loss    4.4062
+08/02/2020 04:51:25 - INFO - __main__ -   TRAIN Batch 0899/1314, Loss    4.7379
+08/02/2020 04:51:28 - INFO - __main__ -   TRAIN Batch 0999/1314, Loss    4.6842
+08/02/2020 04:51:31 - INFO - __main__ -   TRAIN Batch 1099/1314, Loss    4.6185
+08/02/2020 04:51:34 - INFO - __main__ -   TRAIN Batch 1199/1314, Loss    4.8894
+08/02/2020 04:51:37 - INFO - __main__ -   TRAIN Batch 1299/1314, Loss    4.6894
+08/02/2020 04:51:37 - INFO - __main__ -   TRAIN Batch 1314/1314, Loss    4.9035
+08/02/2020 04:51:37 - INFO - __main__ -   TRAIN Epoch 04/8, Mean Loss: 4.5446, PPL: 94.1201
+08/02/2020 04:51:37 - INFO - __main__ -   Epoch running time: 36.133885860443115 seconds.
+08/02/2020 04:51:38 - INFO - __main__ -   VALID Batch 0099/105, Loss    5.2548
+08/02/2020 04:51:38 - INFO - __main__ -   VALID Batch 0105/105, Loss    4.2167
+08/02/2020 04:51:38 - INFO - __main__ -   VALID Epoch 04/8, Mean Loss: 4.8155, PPL: 123.4144
+08/02/2020 04:51:41 - INFO - __main__ -   TRAIN Batch 0099/1314, Loss    4.3538
+08/02/2020 04:51:44 - INFO - __main__ -   TRAIN Batch 0199/1314, Loss    4.3102
+08/02/2020 04:51:47 - INFO - __main__ -   TRAIN Batch 0299/1314, Loss    4.5255
+08/02/2020 04:51:49 - INFO - __main__ -   TRAIN Batch 0399/1314, Loss    4.4482
+08/02/2020 04:51:52 - INFO - __main__ -   TRAIN Batch 0499/1314, Loss    4.3948
+08/02/2020 04:51:54 - INFO - __main__ -   TRAIN Batch 0599/1314, Loss    3.9788
+08/02/2020 04:51:57 - INFO - __main__ -   TRAIN Batch 0699/1314, Loss    4.2378
+08/02/2020 04:52:00 - INFO - __main__ -   TRAIN Batch 0799/1314, Loss    4.5981
+08/02/2020 04:52:03 - INFO - __main__ -   TRAIN Batch 0899/1314, Loss    4.4056
+08/02/2020 04:52:06 - INFO - __main__ -   TRAIN Batch 0999/1314, Loss    4.1523
+08/02/2020 04:52:09 - INFO - __main__ -   TRAIN Batch 1099/1314, Loss    4.3829
+08/02/2020 04:52:12 - INFO - __main__ -   TRAIN Batch 1199/1314, Loss    4.4985
+08/02/2020 04:52:15 - INFO - __main__ -   TRAIN Batch 1299/1314, Loss    4.6653
+08/02/2020 04:52:15 - INFO - __main__ -   TRAIN Batch 1314/1314, Loss    4.7786
+08/02/2020 04:52:15 - INFO - __main__ -   TRAIN Epoch 05/8, Mean Loss: 4.3965, PPL: 81.1687
+08/02/2020 04:52:15 - INFO - __main__ -   Epoch running time: 36.90495014190674 seconds.
+08/02/2020 04:52:16 - INFO - __main__ -   VALID Batch 0099/105, Loss    5.2017
+08/02/2020 04:52:16 - INFO - __main__ -   VALID Batch 0105/105, Loss    4.2133
+08/02/2020 04:52:16 - INFO - __main__ -   VALID Epoch 05/8, Mean Loss: 4.7965, PPL: 121.0861
+08/02/2020 04:52:19 - INFO - __main__ -   TRAIN Batch 0099/1314, Loss    4.3250
+08/02/2020 04:52:22 - INFO - __main__ -   TRAIN Batch 0199/1314, Loss    4.6674
+08/02/2020 04:52:25 - INFO - __main__ -   TRAIN Batch 0299/1314, Loss    4.4327
+08/02/2020 04:52:28 - INFO - __main__ -   TRAIN Batch 0399/1314, Loss    4.3669
+08/02/2020 04:52:30 - INFO - __main__ -   TRAIN Batch 0499/1314, Loss    4.0801
+08/02/2020 04:52:32 - INFO - __main__ -   TRAIN Batch 0599/1314, Loss    4.1796
+08/02/2020 04:52:35 - INFO - __main__ -   TRAIN Batch 0699/1314, Loss    4.3990
+08/02/2020 04:52:37 - INFO - __main__ -   TRAIN Batch 0799/1314, Loss    4.6471
+08/02/2020 04:52:39 - INFO - __main__ -   TRAIN Batch 0899/1314, Loss    4.4945
+08/02/2020 04:52:42 - INFO - __main__ -   TRAIN Batch 0999/1314, Loss    4.2148
+08/02/2020 04:52:44 - INFO - __main__ -   TRAIN Batch 1099/1314, Loss    4.3376
+08/02/2020 04:52:46 - INFO - __main__ -   TRAIN Batch 1199/1314, Loss    4.4470
+08/02/2020 04:52:48 - INFO - __main__ -   TRAIN Batch 1299/1314, Loss    3.9965
+08/02/2020 04:52:49 - INFO - __main__ -   TRAIN Batch 1314/1314, Loss    3.8354
+08/02/2020 04:52:49 - INFO - __main__ -   TRAIN Epoch 06/8, Mean Loss: 4.2638, PPL: 71.0827
+08/02/2020 04:52:49 - INFO - __main__ -   Epoch running time: 32.73003792762756 seconds.
+08/02/2020 04:52:50 - INFO - __main__ -   VALID Batch 0099/105, Loss    5.2205
+08/02/2020 04:52:50 - INFO - __main__ -   VALID Batch 0105/105, Loss    4.2505
+08/02/2020 04:52:50 - INFO - __main__ -   VALID Epoch 06/8, Mean Loss: 4.7971, PPL: 121.1569
+08/02/2020 04:52:52 - INFO - __main__ -   TRAIN Batch 0099/1314, Loss    4.1610
+08/02/2020 04:52:54 - INFO - __main__ -   TRAIN Batch 0199/1314, Loss    4.4839
+08/02/2020 04:52:56 - INFO - __main__ -   TRAIN Batch 0299/1314, Loss    3.7824
+08/02/2020 04:52:59 - INFO - __main__ -   TRAIN Batch 0399/1314, Loss    4.1739
+08/02/2020 04:53:01 - INFO - __main__ -   TRAIN Batch 0499/1314, Loss    4.1454
+08/02/2020 04:53:03 - INFO - __main__ -   TRAIN Batch 0599/1314, Loss    3.6677
+08/02/2020 04:53:06 - INFO - __main__ -   TRAIN Batch 0699/1314, Loss    4.3258
+08/02/2020 04:53:08 - INFO - __main__ -   TRAIN Batch 0799/1314, Loss    3.8839
+08/02/2020 04:53:10 - INFO - __main__ -   TRAIN Batch 0899/1314, Loss    4.2393
+08/02/2020 04:53:13 - INFO - __main__ -   TRAIN Batch 0999/1314, Loss    4.2398
+08/02/2020 04:53:15 - INFO - __main__ -   TRAIN Batch 1099/1314, Loss    3.5811
+08/02/2020 04:53:17 - INFO - __main__ -   TRAIN Batch 1199/1314, Loss    4.3536
+08/02/2020 04:53:20 - INFO - __main__ -   TRAIN Batch 1299/1314, Loss    4.2066
+08/02/2020 04:53:21 - INFO - __main__ -   TRAIN Batch 1314/1314, Loss    3.9673
+08/02/2020 04:53:21 - INFO - __main__ -   TRAIN Epoch 07/8, Mean Loss: 4.1432, PPL: 63.0020
+08/02/2020 04:53:21 - INFO - __main__ -   Epoch running time: 30.986586332321167 seconds.
+08/02/2020 04:53:21 - INFO - __main__ -   VALID Batch 0099/105, Loss    5.2194
+08/02/2020 04:53:21 - INFO - __main__ -   VALID Batch 0105/105, Loss    4.3022
+08/02/2020 04:53:21 - INFO - __main__ -   VALID Epoch 07/8, Mean Loss: 4.8264, PPL: 124.7638
