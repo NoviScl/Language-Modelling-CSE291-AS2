@@ -39,7 +39,7 @@ sh train_vae.sh
 
 I have not added codes to support multi-gpu distributed parallel training yet. (Let me know if you need urgent support on this.)
 
-### Samples from trained VAE
+### Samples from trained VAE (Chenglei: haven't tried this yet)
 Sentenes have been obtained after sampling from z ~ N(0, I).  
 
 _mr . n who was n't n with his own staff and the n n n n n_  
