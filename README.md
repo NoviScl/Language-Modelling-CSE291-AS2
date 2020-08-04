@@ -42,9 +42,9 @@ I have not added codes to support multi-gpu distributed parallel training yet. (
 ### Samples from trained VAE (Chenglei: haven't tried this yet)
 Sentenes have been obtained after sampling from z ~ N(0, I).  
 
-the '<unk>' '<unk>' '<eos>'
+the unk unk eos
   
-the company said it will be a '<unk>' '<unk>' '<eos>'
-  
+the company said it will be a unk unk eos
+
 
 
