@@ -42,9 +42,9 @@ I have not added codes to support multi-gpu distributed parallel training yet. (
 ### Samples from trained VAE (Chenglei: haven't tried this yet)
 Sentenes have been obtained after sampling from z ~ N(0, I).  
 
-_mr . n who was n't n with his own staff and the n n n n n_  
-_in the n of the n of the u . s . companies are n't likely to be reached for comment_  
-_when they were n in the n and then they were n a n n_  
-_but the company said it will be n by the end of the n n and n n_  
-_but the company said that it will be n n of the u . s . economy_  
+the <unk> <unk> <eos>
+  
+the company said it will be a <unk> <unk> <eos>
+  
+
 
